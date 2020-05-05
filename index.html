@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <!-- button goes here inside the body -->
+    <button id = "button">😴</button>>
 </body>
 </html>
 
 <script> // This is all JavaScript below this point
-
+var mybutton = document.getElementById('button')
+mybutton.onclick = buttonClick;
     // Create your variable here that represent the targeted button
 
     function getRandomInt(max) { // This functions returns a number between 0 and 'max'
         return Math.floor(Math.random() * Math.floor(max));
     }
-
+    function buttonClick(){
+        var emoji = ["😊","🤓","😵","🤑","🤩","😭","🤐"];
+        mybutton.innerHTML = emoji[getRandomInt(emoji.length-1)];
+    }
     // Create your button click function here
 
     // Assign the button to the function you created here
